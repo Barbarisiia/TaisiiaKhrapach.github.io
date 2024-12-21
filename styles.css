@@ -1,53 +1,81 @@
+/* Загальні стилі для сторінки */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* Встановлюємо шрифт */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f9; /* Світло-сірий фон */
+    color: #333; /* Темний текст */
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #2c3e50; /* Темний фон для хедера */
+    color: white; /* Білий текст */
     text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 section {
-    margin: 20px;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Легке тінювання */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #about-me {
-    background-color: #f9f9f9;
+    background-color: #ecf0f1; /* Світло-сірий фон для розділу "Про мене" */
 }
 
 #social-media ul {
-    list-style-type: none;
+    list-style-type: none; /* Видаляємо стандартні маркери */
     padding: 0;
 }
 
 #social-media li {
-    display: inline-block;
-    margin-right: 10px;
+    margin: 10px 0;
 }
 
 #social-media a {
     text-decoration: none;
-    font-size: 18px;
-    color: #333;
+    color: #2980b9; /* Синій колір для лінків */
+    font-size: 1.2rem;
 }
 
 #social-media a:hover {
-    color: #007bff;
+    color: #3498db; /* Яскравіший синій на ховер */
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 10px;
+    background-color: #2c3e50;
     color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Іконки соціальних мереж */
+#social-media i {
+    margin-right: 8px;
 }
