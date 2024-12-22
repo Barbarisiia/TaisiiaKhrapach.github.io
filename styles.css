@@ -63,9 +63,10 @@ body {
 
 /* Стиль для текстової частини */
 .text {
-  max-width: 500px;
+  max-width: 450px; /* Зменшили ширину контейнера для тексту */
   text-align: left;
-  padding-left: 20px; /* Відступ ліворуч */
+  padding-left: 10px; /* Зменшили відступ ліворуч */
+  padding-right: 10px; /* Можна додати відступ праворуч */
 }
 
 /* Соціальні іконки */
@@ -95,3 +96,4 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
+
