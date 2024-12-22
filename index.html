@@ -12,37 +12,49 @@
     <h1>Ласкаво просимо!</h1>
   </header>
 
-  <div class="slider">
-  <div class="slides" id="slides">
-    <div class="slide"><img src="https://drive.google.com/uc?id=1gbJ4GrEBKCYZFSq-wiSEt1IGrKpgnj1n" alt="Photo 1"></div>
-    <div class="slide"><img src="https://drive.google.com/uc?id=1gdKdw_NRYwtc_NQNLoPVT0AN_bjkCU3W" alt="Photo 2"></div>
-    <div class="slide"><img src="https://drive.google.com/uc?id=1gdS4bOu3NeSsdMufTzOxgK-aT17WZ1hx" alt="Photo 3"></div>
+  <!-- Галерея зображень -->
+  <div class="gallery">
+    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+    <img id="current-image" src="/ЧУ-177.jpg" alt="Gallery Image">
+    <button class="arrow right" onclick="nextImage()">&#10095;</button>
   </div>
-</div>
 
-<div class="social-icons">
-  <a href="https://facebook.com/share/1MVYjHDwWe" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://instagram.com/taisiaeu" target="_blank"><i class="fab fa-instagram"></i></a>
-  <p>Email: <a href="mailto:taisiaeu@gmail.com">taisiaeu@gmail.com</a></p>
-</div>
-
+  <div class="social-icons">
+    <a href="https://facebook.com/share/1MVYjHDwWe" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/taisiaeu" target="_blank"><i class="fab fa-instagram"></i></a>
+    <p>Email: <a href="mailto:taisiaeu@gmail.com">taisiaeu@gmail.com</a></p>
+  </div>
 
   <footer>
     © 2024 Taisiia Khrapach
   </footer>
 
   <script>
+    // Масив із шляхами до зображень
+    const images = [
+      "/ЧУ-177.jpg",
+      "/ЧУ-130.jpg",
+      "/ЧУ-121.jpg"
+    ];
+
     let currentIndex = 0;
 
-    function showNextSlide() {
-      const slides = document.getElementById('slides');
-      const totalSlides = slides.children.length;
-
-      currentIndex = (currentIndex + 1) % totalSlides;
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    function showImage(index) {
+      const imageElement = document.getElementById("current-image");
+      imageElement.src = images[index];
     }
 
-    setInterval(showNextSlide, 3000);
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
   </script>
 </body>
 </html>
+
+
