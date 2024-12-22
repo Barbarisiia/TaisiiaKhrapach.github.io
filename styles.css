@@ -69,6 +69,16 @@ body {
   padding-right: 10px; /* Можна додати відступ праворуч */
 }
 
+/* Заголовок */
+header {
+  background-color: #0073e6;
+  color: white;
+  text-align: center; /* Вирівнюємо заголовок по центру */
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 /* Соціальні іконки */
 .social-icons {
   text-align: center;
@@ -96,4 +106,3 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
-
