@@ -1,3 +1,4 @@
+/* Загальний стиль для тіла */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,49 +7,51 @@ body {
   min-height: 100vh;
 }
 
-header {
-  background-color: #0073e6;
-  color: white;
-  text-align: center;
+/* Секція контенту: фотографії зліва, текст справа */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;  /* Розміщує контент зліва і справа */
-  margin: 20px;
-}
-
+/* Стилі для галереї */
 .gallery {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  width: 50%;  /* Задаємо ширину для зображень */
-  margin-right: 20px;
+  max-width: 500px;
+  max-height: 400px;
+  margin-right: 20px; /* Між фотографією і текстом */
 }
 
+/* Зображення в галереї */
 .gallery img {
   max-width: 100%;
   height: auto;
   max-height: 400px;
-  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px; /* Між фотографією та стрілками */
 }
 
+/* Кнопки стрілок */
 .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 30px;
   border: none;
+  font-size: 30px;
   padding: 10px;
   cursor: pointer;
-  position: absolute;
-  bottom: -40px;  /* Встановлюємо стрілки під зображенням */
-  width: 100%;  /* Розтягуємо на всю ширину контейнера */
-  text-align: center;
+  z-index: 1;
+  transition: background-color 0.3s;
 }
 
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Розташування стрілок */
 .arrow.left {
   left: 10px;
 }
@@ -57,13 +60,16 @@ header {
   right: 10px;
 }
 
+/* Стиль для текстової частини */
 .text {
-  width: 45%;  /* Задаємо ширину для тексту */
+  max-width: 500px;
+  text-align: left;
 }
 
+/* Соціальні іконки */
 .social-icons {
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .social-icons a {
@@ -77,6 +83,7 @@ header {
   color: #0073e6;
 }
 
+/* Футер */
 footer {
   position: fixed;
   bottom: 0;
