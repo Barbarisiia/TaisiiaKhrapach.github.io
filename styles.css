@@ -60,3 +60,40 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
+
+/* Стилі для галереї */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 400px;
+  margin: 20px auto; /* Центрування галереї */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.gallery .arrow.left {
+  left: -40px;
+}
+
+.gallery .arrow.right {
+  right: -40px;
+}
