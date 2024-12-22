@@ -13,19 +13,26 @@ header {
   padding: 20px;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;  /* Розміщує контент зліва і справа */
+  margin: 20px;
+}
+
 .gallery {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   position: relative;
+  width: 50%;  /* Задаємо ширину для зображень */
 }
 
 .gallery img {
   max-width: 100%;
   height: auto;
   max-height: 400px;
-  margin: 0 10px;
+  margin-bottom: 10px;
 }
 
 .arrow {
@@ -48,9 +55,13 @@ header {
   right: 10px;
 }
 
+.text {
+  width: 45%;  /* Задаємо ширину для тексту */
+}
+
 .social-icons {
   text-align: center;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .social-icons a {
