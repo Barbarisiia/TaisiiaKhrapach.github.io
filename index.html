@@ -12,11 +12,12 @@
     <h1>Ласкаво просимо!</h1>
   </header>
 
+  <!-- Контент, розміщений зліва фотографії, справа текст -->
   <div class="content">
     <!-- Галерея зображень -->
     <div class="gallery">
-      <button class="arrow left" onclick="prevImage()">&#10094;</button>
       <img id="current-image" src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg" alt="Gallery Image">
+      <button class="arrow left" onclick="prevImage()">&#10094;</button>
       <button class="arrow right" onclick="nextImage()">&#10095;</button>
     </div>
 
@@ -37,6 +38,7 @@
   </footer>
 
   <script>
+    // Масив із шляхами до зображень
     const images = [
       "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg",
       "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-130.jpg",
