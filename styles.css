@@ -30,7 +30,7 @@ header {
   flex: 3;
   text-align: left;
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   margin-left: 20px; /* Підсунули текст правіше, щоб він був ближче до зображення */
 }
 
@@ -102,7 +102,7 @@ h3 {
   position: absolute;
   bottom: 50px; /* Відстань від нижнього краю екрану до іконок */
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #fffefe;
   text-align: center;
   padding: 10px;
 }
