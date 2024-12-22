@@ -12,19 +12,22 @@
     <h1>Ласкаво просимо!</h1>
   </header>
 
-  <!-- Секція "Про мене" -->
-  <div class="about-me">
-    <h2 class="name">Khrapach Taisiia</h2>
-    <h3>Про мене</h3>
-    <p class="about-text">Я 9-річна дівчинка, яка займається шахами, і вже рік маю перший юнацький розряд. Моя мета — отримати третій розряд з шахів. Я дуже люблю це хобі і прагну розвиватися у цьому напрямку. Дякую, що завітали на мій сайт!</p>
-  </div>
+  <!-- Секція "Про мене" та галерея -->
+  <div class="main-content">
+    <!-- Галерея зображень -->
+    <div class="gallery-container">
+      <div class="gallery">
+        <button class="arrow left" onclick="prevImage()">&#10094;</button>
+        <img id="current-image" src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg" alt="Gallery Image">
+        <button class="arrow right" onclick="nextImage()">&#10095;</button>
+      </div>
+    </div>
 
-  <!-- Галерея зображень -->
-  <div class="gallery-container">
-    <div class="gallery">
-      <button class="arrow left" onclick="prevImage()">&#10094;</button>
-      <img id="current-image" src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg" alt="Gallery Image">
-      <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    <!-- Текст "Про мене" -->
+    <div class="about-me">
+      <h2 class="name">Khrapach Taisiia</h2>
+      <h3>Про мене</h3>
+      <p class="about-text">Я 9-річна дівчинка, яка займається шахами, і вже рік маю перший юнацький розряд. Моя мета — отримати третій розряд з шахів. Я дуже люблю це хобі і прагну розвиватися у цьому напрямку. Дякую, що завітали на мій сайт!</p>
     </div>
   </div>
 
@@ -67,4 +70,3 @@
   </script>
 </body>
 </html>
-
