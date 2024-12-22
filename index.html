@@ -14,12 +14,9 @@
 
   <!-- Галерея зображень -->
   <div class="gallery">
-    <img src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg" alt="Gallery Image 1">
-     <img src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-130.jpg" alt="Gallery Image 2">
-     <img src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-121.jpg" alt="Gallery Image 3">
-     <img src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/FB_IMG_1733130021245.jpg" alt="Gallery Image 4">
-     <img src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/FB_IMG_1732999050978.jpg" alt="Gallery Image 5">
-    <img src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/1688392433417.jpg" alt="Gallery Image 6">
+    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+    <img id="current-image" src="https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg" alt="Gallery Image">
+    <button class="arrow right" onclick="nextImage()">&#10095;</button>
   </div>
 
   <div class="social-icons">
@@ -31,6 +28,33 @@
   <footer>
     © 2024 Taisiia Khrapach
   </footer>
+
+  <script>
+    const images = [
+      "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-177.jpg",
+      "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-130.jpg",
+      "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/ЧУ-121.jpg",
+      "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/FB_IMG_1733130021245.jpg",
+      "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/FB_IMG_1732999050978.jpg",
+      "https://raw.githubusercontent.com/Barbarisiia/TaisiiaKhrapach.github.io/main/1688392433417.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+      const imageElement = document.getElementById("current-image");
+      imageElement.src = images[index];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
 </body>
 </html>
-
