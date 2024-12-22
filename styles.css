@@ -99,8 +99,12 @@ h3 {
 
 /* Стиль для соціальних іконок */
 .social-icons {
+  position: absolute;
+  bottom: 50px; /* Відстань від нижнього краю екрану до іконок */
+  width: 100%;
+  background-color: #f1f1f1;
   text-align: center;
-  margin: 20px 0;
+  padding: 10px;
 }
 
 .social-icons a {
@@ -112,6 +116,10 @@ h3 {
 
 .social-icons a:hover {
   color: #0073e6;
+}
+
+.social-icons p {
+  font-size: 14px;
 }
 
 /* Футер */
