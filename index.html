@@ -12,12 +12,11 @@
     <h1>Ласкаво просимо!</h1>
   </header>
 
-  <!-- Галерея зображень -->
+  <!-- Галерея зображень без слайдера -->
   <div class="gallery">
-    <button class="arrow left" onclick="prevImage()">&#10094;</button>
-    <!-- Вставка зображення з використанням HTML тегу -->
-    <img id="current-image" src="/least-github-pages/assets/ЧУ-177.jpg" alt="Gallery Image">
-    <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    <img src="/least-github-pages/assets/ЧУ-177.jpg" alt="Gallery Image 1">
+    <img src="/least-github-pages/assets/ЧУ-130.jpg" alt="Gallery Image 2">
+    <img src="/least-github-pages/assets/ЧУ-121.jpg" alt="Gallery Image 3">
   </div>
 
   <div class="social-icons">
@@ -30,31 +29,5 @@
     © 2024 Taisiia Khrapach
   </footer>
 
-  <script>
-    // Масив із шляхами до зображень
-    const images = [
-      "/least-github-pages/assets/ЧУ-177.jpg",
-      "/least-github-pages/assets/ЧУ-130.jpg",
-      "/least-github-pages/assets/ЧУ-121.jpg"
-    ];
-
-    let currentIndex = 0;
-
-    function showImage(index) {
-      const imageElement = document.getElementById("current-image");
-      imageElement.src = images[index];
-    }
-
-    function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    }
-
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
-  </script>
 </body>
 </html>
-
