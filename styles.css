@@ -28,10 +28,10 @@ header {
 /* Секція "Про мене" */
 .about-me {
   flex: 1;
-  margin-left: 10px; /* зменшили відступ зліва */
   text-align: left;
   padding: 20px;
   background-color: #f8f8f8;
+  margin-left: 20px; /* Підсунули текст правіше, щоб він був ближче до зображення */
 }
 
 .name {
@@ -60,14 +60,12 @@ h3 {
   justify-content: center;
   align-items: center;
   flex: 1;
-  margin-right: 10px; /* зменшили відступ справа */
 }
 
 .gallery {
   position: relative;
   max-width: 500px;
   max-height: 400px;
-  margin: 0 20px;
 }
 
 .gallery img {
@@ -126,4 +124,3 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
-
