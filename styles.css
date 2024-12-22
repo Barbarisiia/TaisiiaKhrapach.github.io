@@ -28,7 +28,7 @@ header {
 /* Секція "Про мене" */
 .about-me {
   flex: 1;
-  margin-left: 20px;
+  margin-left: 10px; /* зменшили відступ зліва */
   text-align: left;
   padding: 20px;
   background-color: #f8f8f8;
@@ -57,10 +57,10 @@ h3 {
 /* Стилі для галереї */
 .gallery-container {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex: 1;
-  margin-right: 20px;
+  margin-right: 10px; /* зменшили відступ справа */
 }
 
 .gallery {
@@ -126,3 +126,4 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
+
