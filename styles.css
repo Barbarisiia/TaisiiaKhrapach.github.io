@@ -31,7 +31,7 @@ header {
   text-align: left;
   padding: 20px;
   background-color: #ffffff;
-  margin-left: 20px; /* Підсунули текст правіше, щоб він був ближче до зображення */
+  margin-left: 20px;
 }
 
 .name {
@@ -100,7 +100,7 @@ h3 {
 /* Стиль для соціальних іконок */
 .social-icons {
   position: absolute;
-  bottom: 50px; /* Відстань від нижнього краю екрану до іконок */
+  bottom: 50px;
   width: 100%;
   background-color: #fffefe;
   text-align: center;
@@ -132,13 +132,86 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
+
 .achievements {
-  font-size: 1.2em; /* Збільшений розмір тексту списку */
-  line-height: 1.5; /* Покращення читабельності списку */
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
 .additional-text {
-  font-size: 1.3em; /* Збільшений розмір тексту під списком */
-  margin-top: 10px; /* Відступ зверху */
+  font-size: 1.3em;
+  margin-top: 10px;
 }
 
+/* Адаптивність */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .about-me {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .gallery-container {
+    max-width: 100%;
+  }
+
+  .gallery img {
+    max-height: 300px;
+  }
+
+  .achievements {
+    font-size: 1em;
+  }
+
+  .additional-text {
+    font-size: 1.1em;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .achievements {
+    font-size: 0.9em;
+  }
+
+  .additional-text {
+    font-size: 1em;
+  }
+
+  .gallery img {
+    max-height: 250px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
