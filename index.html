@@ -127,11 +127,19 @@
 
     // Функція для перекладу
     function translate(language) {
-      document.getElementById('header-text').innerText = translations[`${language}Text`];
-      document.getElementById('name').innerText = translations[`${language}Name`];
-      document.getElementById('about-me-title').innerText = translations[`${language}AboutMeTitle`];
-      document.getElementById('about-text').innerHTML = translations[`${language}AboutText`];
-      document.getElementById('additional-text').innerHTML = translations[`${language}AdditionalText`];
+      if (language === 'en') {
+        document.getElementById('header-text').innerText = translations.headerText;
+        document.getElementById('name').innerText = translations.name;
+        document.getElementById('about-me-title').innerText = translations.aboutMeTitle;
+        document.getElementById('about-text').innerHTML = translations.aboutText;
+        document.getElementById('additional-text').innerHTML = translations.additionalText;
+      } else if (language === 'uk') {
+        document.getElementById('header-text').innerText = ukraineText.headerText;
+        document.getElementById('name').innerText = ukraineText.name;
+        document.getElementById('about-me-title').innerText = ukraineText.aboutMeTitle;
+        document.getElementById('about-text').innerHTML = ukraineText.aboutText;
+        document.getElementById('additional-text').innerHTML = ukraineText.additionalText;
+      }
     }
 
     // Події для кнопок
