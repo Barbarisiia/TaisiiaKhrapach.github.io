@@ -132,3 +132,14 @@ footer {
   padding: 10px;
   font-size: 14px;
 }
+.achievements {
+  font-size: 1.2em; /* Збільшений розмір тексту списку */
+  line-height: 1.5; /* Покращення читабельності списку */
+}
+
+.additional-text {
+  font-size: 1.3em; /* Збільшений розмір тексту під списком */
+  font-weight: bold; /* Виділення тексту жирністю */
+  margin-top: 10px; /* Відступ зверху */
+}
+
