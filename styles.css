@@ -15,6 +15,15 @@ header {
   padding: 20px;
   font-size: 24px;
   font-weight: bold;
+  word-wrap: break-word; /* Уникає обрізання тексту */
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 20px;
+    padding: 15px;
+  }
 }
 
 /* Стилі для основного контенту */
@@ -23,60 +32,51 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
+  flex-wrap: wrap; /* Виправляє переповнення на малих екранах */
 }
 
-/* Секція "Про мене" */
 .about-me {
-  flex: 3;
-  text-align: left;
+  flex: 1;
+  text-align: center; /* Вирівнювання для мобільних пристроїв */
   padding: 20px;
   background-color: #ffffff;
-  margin-left: 20px;
+  margin: 10px 0; /* Універсальний відступ для всіх пристроїв */
 }
 
 .name {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
 }
 
 h3 {
   font-size: 24px;
-  margin-top: 0;
   font-weight: bold;
 }
 
 .about-text {
-  font-size: 20px;
-  color: #000000;
-  margin-top: 10px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
-/* Стилі для галереї */
+/* Галерея */
 .gallery-container {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  flex: 1;
+  width: 100%;
+  max-width: 500px; /* Для великих екранів */
+  margin: auto;
 }
 
 .gallery {
   position: relative;
-  max-width: 500px;
-  max-height: 400px;
 }
 
 .gallery img {
   width: 100%;
-  height: auto;
   max-height: 400px;
+  object-fit: contain; /* Виправляє обрізання зображень */
   display: block;
-  margin-bottom: 10px;
 }
 
-/* Стиль для стрілок */
 .arrow {
   position: absolute;
   top: 50%;
@@ -97,14 +97,14 @@ h3 {
   right: 10px;
 }
 
-/* Стиль для соціальних іконок */
+/* Соціальні іконки */
 .social-icons {
-  position: absolute;
-  bottom: 50px;
+  position: relative;
   width: 100%;
-  background-color: #fffefe;
   text-align: center;
-  padding: 10px;
+  padding: 10px 0;
+  margin-top: auto;
+  background-color: #f1f1f1; /* Візуально відокремлює секцію */
 }
 
 .social-icons a {
@@ -118,29 +118,12 @@ h3 {
   color: #0073e6;
 }
 
-.social-icons p {
-  font-size: 14px;
-}
-
 /* Футер */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #f1f1f1;
   text-align: center;
+  background-color: #f1f1f1;
   padding: 10px;
   font-size: 14px;
-}
-
-.achievements {
-  font-size: 1.2em;
-  line-height: 1.5;
-}
-
-.additional-text {
-  font-size: 1.3em;
-  margin-top: 10px;
 }
 
 /* Адаптивність */
@@ -152,12 +135,8 @@ footer {
   }
 
   .about-me {
-    margin-left: 0;
     text-align: center;
-  }
-
-  .gallery-container {
-    max-width: 100%;
+    margin: 10px 0;
   }
 
   .gallery img {
@@ -178,11 +157,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  header {
-    font-size: 20px;
-    padding: 15px;
-  }
-
   .name {
     font-size: 28px;
   }
@@ -193,14 +167,6 @@ footer {
 
   .about-text {
     font-size: 16px;
-  }
-
-  .achievements {
-    font-size: 0.9em;
-  }
-
-  .additional-text {
-    font-size: 1em;
   }
 
   .gallery img {
