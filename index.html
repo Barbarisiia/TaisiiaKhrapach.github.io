@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1 id="header-text">Ласкаво просимо!</h1>
+    <h1>Ласкаво просимо!</h1>
   </header>
 
   <!-- Основний контент: зображення і текст -->
@@ -25,9 +25,9 @@
 
     <!-- Текст "Про мене" -->
     <div class="about-me">
-      <div class="name" id="name">Khrapach Taisiia</div>
-      <h3 id="about-me-title">Про мене</h3>
-      <p class="about-text" id="about-text">
+      <div class="name">Khrapach Taisiia</div>
+      <h3>Про мене</h3>
+      <p class="about-text">
         Привіт! Мене звати Храпач Таїсія.  
         Мені 15 років, і я професійна шахістка. Маю перший спортивний розряд та такі досягнення в шахах:  
         <ul class="achievements">
@@ -37,17 +37,13 @@
           <li>Чемпіонка Івано-Франківської області до 14 років.</li>
           <li>Чемпіонка м. Коломия до 16 років із результатом 9 із 9 набраних очок.</li>
         </ul>
-        <span class="additional-text" id="additional-text">
+        <span class="additional-text">
           Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською.  
           Я також є авторкою книги <strong>"Хід королеви"</strong>.
         </span> 
       </p>
     </div>
   </div>
-
-  <!-- Кнопки для перекладу -->
-  <button id="translate-en-btn">Перекласти на англійську</button>
-  <button id="translate-uk-btn">Перекласти на українську</button>
 
   <!-- Соціальні іконки -->
   <div class="social-icons">
@@ -87,63 +83,6 @@
       currentIndex = (currentIndex + 1) % images.length;
       showImage(currentIndex);
     }
-
-    // Переклад на англійську
-    const translations = {
-      headerText: "Welcome!",
-      name: "Taisiia Khrapach",
-      aboutMeTitle: "About Me",
-      aboutText: "Hello! My name is Taisiia Khrapach. I am 15 years old and a professional chess player. I have the first sports rank and these achievements in chess: " +
-                 "<ul class='achievements'>" +
-                 "<li>Bronze medalist of the Ukrainian Championship under 14 (classical chess).</li>" +
-                 "<li>Bronze medalist of the Ukrainian Championship under 16 (classical chess).</li>" +
-                 "<li>Champion of Ivano-Frankivsk region under 18.</li>" +
-                 "<li>Champion of Ivano-Frankivsk region under 14.</li>" +
-                 "<li>Champion of Kolomyia under 16 with a result of 9 out of 9 points.</li>" +
-                 "</ul>" +
-                 "<span class='additional-text'>In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish. I am also the author of the book <strong>'The Queen's Move'</strong>.</span>",
-
-      additionalText: "In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish. I am also the author of the book 'The Queen's Move'.",
-    };
-
-    const ukraineText = {
-      headerText: "Ласкаво просимо!",
-      name: "Khrapach Taisiia",
-      aboutMeTitle: "Про мене",
-      aboutText: "Привіт! Мене звати Храпач Таїсія. Мені 15 років, і я професійна шахістка. Маю перший спортивний розряд та такі досягнення в шахах: " +
-                 "<ul class='achievements'>" +
-                 "<li>Бронзова призерка чемпіонату України до 14 років (класичні шахи).</li>" +
-                 "<li>Бронзова призерка чемпіонату України до 16 років (класичні шахи).</li>" +
-                 "<li>Чемпіонка Івано-Франківської області до 18 років.</li>" +
-                 "<li>Чемпіонка Івано-Франківської області до 14 років.</li>" +
-                 "<li>Чемпіонка м. Коломия до 16 років із результатом 9 із 9 набраних очок.</li>" +
-                 "</ul>" +
-                 "<span class='additional-text'>Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською. Я також є авторкою книги <strong>'Хід королеви'</strong>.</span>",
-
-      additionalText: "Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською. Я також є авторкою книги 'Хід королеви'.",
-    };
-
-    // Функція для перекладу
-    function translate(language) {
-      if (language === 'en') {
-        document.getElementById('header-text').innerText = translations.headerText;
-        document.getElementById('name').innerText = translations.name;
-        document.getElementById('about-me-title').innerText = translations.aboutMeTitle;
-        document.getElementById('about-text').innerHTML = translations.aboutText;
-        document.getElementById('additional-text').innerHTML = translations.additionalText;
-      } else if (language === 'uk') {
-        document.getElementById('header-text').innerText = ukraineText.headerText;
-        document.getElementById('name').innerText = ukraineText.name;
-        document.getElementById('about-me-title').innerText = ukraineText.aboutMeTitle;
-        document.getElementById('about-text').innerHTML = ukraineText.aboutText;
-        document.getElementById('additional-text').innerHTML = ukraineText.additionalText;
-      }
-    }
-
-    // Події для кнопок
-    document.getElementById('translate-en-btn').addEventListener('click', () => translate("en"));
-    document.getElementById('translate-uk-btn').addEventListener('click', () => translate("uk"));
   </script>
 </body>
 </html>
-
