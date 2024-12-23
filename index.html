@@ -45,8 +45,9 @@
     </div>
   </div>
 
-  <!-- Кнопка для перекладу -->
-  <button id="translate-btn">Перекласти</button>
+  <!-- Кнопки для перекладу -->
+  <button id="translate-en-btn">Перекласти на англійську</button>
+  <button id="translate-uk-btn">Перекласти на українську</button>
 
   <!-- Соціальні іконки -->
   <div class="social-icons">
@@ -87,11 +88,10 @@
       showImage(currentIndex);
     }
 
-    // Функція для перекладу
-    document.getElementById('translate-btn').addEventListener('click', function() {
+    // Переклад на англійську
+    function translateToEnglish() {
       const textElements = document.querySelectorAll('.about-text, .name, h3, .additional-text');
       
-      // Перевірка і переклад
       textElements.forEach(function(element) {
         if (element.innerText === 'Khrapach Taisiia') {
           element.innerText = 'Khrapach Taisiia';  // Оригінальний текст
@@ -101,11 +101,30 @@
           element.innerText = 'Hello! My name is Taisiia Khrapach.';  // Переклад на англійську
         } else if (element.innerText === 'Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською.') {
           element.innerText = 'In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish.';  // Переклад на англійську
-        } else {
-          // Інші тексти можна додавати сюди в залежності від того, що треба перекласти
         }
       });
-    });
+    }
+
+    // Переклад на українську
+    function translateToUkrainian() {
+      const textElements = document.querySelectorAll('.about-text, .name, h3, .additional-text');
+      
+      textElements.forEach(function(element) {
+        if (element.innerText === 'Khrapach Taisiia') {
+          element.innerText = 'Khrapach Taisiia';  // Оригінальний текст
+        } else if (element.innerText === 'About Me') {
+          element.innerText = 'Про мене';  // Переклад на українську
+        } else if (element.innerText === 'Hello! My name is Taisiia Khrapach.') {
+          element.innerText = 'Привіт! Мене звати Храпач Таїсія.';  // Переклад на українську
+        } else if (element.innerText === 'In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish.') {
+          element.innerText = 'Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською.';  // Переклад на українську
+        }
+      });
+    }
+
+    // Події для кнопок
+    document.getElementById('translate-en-btn').addEventListener('click', translateToEnglish);
+    document.getElementById('translate-uk-btn').addEventListener('click', translateToUkrainian);
   </script>
 </body>
 </html>
