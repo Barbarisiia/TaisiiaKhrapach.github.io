@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <h1>Ласкаво просимо!</h1>
+    <h1 id="header-text">Ласкаво просимо!</h1>
   </header>
 
   <!-- Основний контент: зображення і текст -->
@@ -25,9 +25,9 @@
 
     <!-- Текст "Про мене" -->
     <div class="about-me">
-      <div class="name">Khrapach Taisiia</div>
-      <h3>Про мене</h3>
-      <p class="about-text">
+      <div class="name" id="name">Khrapach Taisiia</div>
+      <h3 id="about-me-title">Про мене</h3>
+      <p class="about-text" id="about-text">
         Привіт! Мене звати Храпач Таїсія.  
         Мені 15 років, і я професійна шахістка. Маю перший спортивний розряд та такі досягнення в шахах:  
         <ul class="achievements">
@@ -37,7 +37,7 @@
           <li>Чемпіонка Івано-Франківської області до 14 років.</li>
           <li>Чемпіонка м. Коломия до 16 років із результатом 9 із 9 набраних очок.</li>
         </ul>
-        <span class="additional-text">
+        <span class="additional-text" id="additional-text">
           Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською.  
           Я також є авторкою книги <strong>"Хід королеви"</strong>.
         </span> 
@@ -89,43 +89,54 @@
     }
 
     // Переклад на англійську
-    function translateToEnglish() {
-      const textElements = document.querySelectorAll('.about-text, .name, h3, .additional-text');
-      
-      textElements.forEach(function(element) {
-        if (element.innerText === 'Khrapach Taisiia') {
-          element.innerText = 'Khrapach Taisiia';  // Оригінальний текст
-        } else if (element.innerText === 'Про мене') {
-          element.innerText = 'About Me';  // Переклад на англійську
-        } else if (element.innerText === 'Привіт! Мене звати Храпач Таїсія.') {
-          element.innerText = 'Hello! My name is Taisiia Khrapach.';  // Переклад на англійську
-        } else if (element.innerText === 'Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською.') {
-          element.innerText = 'In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish.';  // Переклад на англійську
-        }
-      });
-    }
+    const translations = {
+      headerText: "Welcome!",
+      name: "Taisiia Khrapach",
+      aboutMeTitle: "About Me",
+      aboutText: "Hello! My name is Taisiia Khrapach. I am 15 years old and a professional chess player. I have the first sports rank and these achievements in chess: " +
+                 "<ul class='achievements'>" +
+                 "<li>Bronze medalist of the Ukrainian Championship under 14 (classical chess).</li>" +
+                 "<li>Bronze medalist of the Ukrainian Championship under 16 (classical chess).</li>" +
+                 "<li>Champion of Ivano-Frankivsk region under 18.</li>" +
+                 "<li>Champion of Ivano-Frankivsk region under 14.</li>" +
+                 "<li>Champion of Kolomyia under 16 with a result of 9 out of 9 points.</li>" +
+                 "</ul>" +
+                 "<span class='additional-text'>In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish. I am also the author of the book <strong>'The Queen's Move'</strong>.</span>",
 
-    // Переклад на українську
-    function translateToUkrainian() {
-      const textElements = document.querySelectorAll('.about-text, .name, h3, .additional-text');
-      
-      textElements.forEach(function(element) {
-        if (element.innerText === 'Khrapach Taisiia') {
-          element.innerText = 'Khrapach Taisiia';  // Оригінальний текст
-        } else if (element.innerText === 'About Me') {
-          element.innerText = 'Про мене';  // Переклад на українську
-        } else if (element.innerText === 'Hello! My name is Taisiia Khrapach.') {
-          element.innerText = 'Привіт! Мене звати Храпач Таїсія.';  // Переклад на українську
-        } else if (element.innerText === 'In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish.') {
-          element.innerText = 'Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською.';  // Переклад на українську
-        }
-      });
+      // Додаткові текстові елементи
+      additionalText: "In addition to chess, I speak four languages fluently: Ukrainian, Russian, English, and Spanish. I am also the author of the book 'The Queen's Move'.",
+    };
+
+    const ukraineText = {
+      headerText: "Ласкаво просимо!",
+      name: "Khrapach Taisiia",
+      aboutMeTitle: "Про мене",
+      aboutText: "Привіт! Мене звати Храпач Таїсія. Мені 15 років, і я професійна шахістка. Маю перший спортивний розряд та такі досягнення в шахах: " +
+                 "<ul class='achievements'>" +
+                 "<li>Бронзова призерка чемпіонату України до 14 років (класичні шахи).</li>" +
+                 "<li>Бронзова призерка чемпіонату України до 16 років (класичні шахи).</li>" +
+                 "<li>Чемпіонка Івано-Франківської області до 18 років.</li>" +
+                 "<li>Чемпіонка Івано-Франківської області до 14 років.</li>" +
+                 "<li>Чемпіонка м. Коломия до 16 років із результатом 9 із 9 набраних очок.</li>" +
+                 "</ul>" +
+                 "<span class='additional-text'>Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською. Я також є авторкою книги <strong>'Хід королеви'</strong>.</span>",
+
+      // Додаткові текстові елементи
+      additionalText: "Окрім шахів, я вільно володію чотирма мовами: українською, російською, англійською та іспанською. Я також є авторкою книги 'Хід королеви'.",
+    };
+
+    // Функція для перекладу
+    function translate(language) {
+      document.getElementById('header-text').innerText = translations[`${language}Text`];
+      document.getElementById('name').innerText = translations[`${language}Name`];
+      document.getElementById('about-me-title').innerText = translations[`${language}AboutMeTitle`];
+      document.getElementById('about-text').innerHTML = translations[`${language}AboutText`];
+      document.getElementById('additional-text').innerHTML = translations[`${language}AdditionalText`];
     }
 
     // Події для кнопок
-    document.getElementById('translate-en-btn').addEventListener('click', translateToEnglish);
-    document.getElementById('translate-uk-btn').addEventListener('click', translateToUkrainian);
+    document.getElementById('translate-en-btn').addEventListener('click', () => translate("en"));
+    document.getElementById('translate-uk-btn').addEventListener('click', () => translate("uk"));
   </script>
 </body>
 </html>
-
